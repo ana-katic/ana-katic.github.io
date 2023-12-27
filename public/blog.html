@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Posts App</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    #posts-list {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #posts-list > div {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    p {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>Blog Posts</h1>
+
+  <form id="post-form">
+    <label for="title">Title:</label>
+    <input type="text" id="title" required>
+    <br>
+    <label for="content">Content:</label>
+    <textarea id="content" rows="4" required></textarea>
+    <br>
+    <button type="submit">Add Post</button>
+  </form>
+
+  <div id="posts-list"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const postForm = document.getElementById('post-form');
+      const postsList = document.getElementById('posts-list');
+
+      // Function to fetch and display blog posts
+      const fetchPosts = async () => {
+        const response = await fetch('http://localhost:3000/posts');
+        const posts = await response.json();
+
+        postsList.innerHTML = posts.map(post => `
+          <div>
+            <h2>${post.title}</h2>
+            <p>${post.content}</p>
+          </div>
+        `).join('');
+      };
+
+      // Function to handle form submission
+      const addPost = async (event) => {
+        event.preventDefault();
+
+        const title = document.getElementById('title').value;
+        const content = document.getElementById('content').value;
+
+        const response = await fetch('http://localhost:3000/posts', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ title, content }),
+        });
+
+        const newPost = await response.json();
+        console.log('New post added:', newPost);
+
+        // Fetch and display updated blog posts
+        fetchPosts();
+
+        // Clear the form fields
+        document.getElementById('title').value = '';
+        document.getElementById('content').value = '';
+      };
+
+      // Attach event listener to the form
+      postForm.addEventListener('submit', addPost);
+
+      // Fetch and display initial blog posts
+      fetchPosts();
+    });
+  </script>
+</body>
+</html>
