@@ -10,12 +10,12 @@ Food, art and web development...
 * $ npm -v
 
 ### Configure Node.js for this project
-* Open rrepoo/server folder in terminal.
+* Open server folder in terminal.
 * $ npm init -y
 * $ npm install express sqlite3
 
 ### Run server
-* Open rrepoo/server folder in terminal.
+* Open server folder in terminal.
 * $ node app.js
 
 ### Run client
