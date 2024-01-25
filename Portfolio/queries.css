@@ -62,7 +62,7 @@
     height: 40vh;
   }
   #profile {
-    height: 83vh;
+    height: auto;
     margin-bottom: 0;
   }
   
