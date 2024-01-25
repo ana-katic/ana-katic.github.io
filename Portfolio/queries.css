@@ -90,12 +90,11 @@
     flex-wrap: wrap;
   }
   .contact-info-container {
-    margin: 0;
+    margin: 0.5rem;
   }
   .contact-info-container p,
   .nav-links li a {
     font-size: 1rem;
-    gap: 1rem;
   }
   .experience-sub-title {
     font-size: 1.25rem;
