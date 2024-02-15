@@ -5,37 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!--link from google font Montserrat-->
    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
    <!--LINK for CSS-->
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="queries.css">
-   <!--Icons link-->
-   <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
-   <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
-   <!--Smooth scroll link-->
-   <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
-  <title>Portfolio Web Page, with Grid Layout</title>
+
+   
+  <title>Portfolio Web Page</title>
 </head>
 <body>
-<!--Header-->
-<header class="header sticky">
-  <a href="#" class="logo">Let's Work Together</a>
-  <nav class="main-nav">
-    <ul class="main-nav-list">
-      <li><a href="#about" class="main-nav-link">About</a></li>
-      <li><a href="#experience" class="main-nav-link">Experience</a></li>
-      <li><a href="#projects" class="main-nav-link">Projects</a></li>
-      <li><a href="#contact" class="main-nav-link">Contact</a></li>
-    </ul>
-  </nav>
-  <button class="btn-mobile-nav">
-    <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
-    <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
-  </button>
-</header>
 
-  <section class="profile-section" id="profile">
+  <nav id="desktop-nav">
+    <div class="logo">Ana Katić</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Ana Katić</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
     <div class="section__pic-container">
       <img src="./img/Profile-Photo.png" alt="Ana Katić profile picture" class="profile-photo" />
     </div>
@@ -71,54 +79,54 @@
     </div>
   </section>
 
-    <!--ABOUT ME-->
-    <section class="about-section" id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-  
-      <div class="section-container">
-        <div class="about-details-container">
-         <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./img/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>6 months<br />Sales Advisor</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./img/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>"Economics Specialist - specialization in Accounting and Revision / EFST<br/>University of Split, Croatia</p>
-            </div>
+  <!--ABOUT ME-->
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+
+    <div class="section-container">
+      <div class="about-details-container">
+       <div class="about-containers">
+          <div class="details-container">
+            <img
+              src="./img/experience.png"
+              alt="Experience icon"
+              class="icon"
+            />
+            <h3>Experience</h3>
+            <p>6 months<br />Sales Advisor</p>
+          </div>
+          <div class="details-container">
+            <img
+              src="./img/education.png"
+              alt="Education icon"
+              class="icon"
+            />
+            <h3>Education</h3>
+            <p>"Economics Specialist - specialization in Accounting and Revision / EFST<br/>University of Split, Croatia</p>
           </div>
         </div>
-  
-        <div class="text-container">
-            <p>
-              Motivated young economist with degree in accounting exploring world of web development, on my own!
-              This journey is a testament to my commitment to continuous learning, experimentation, and the joy
-              of bringing ideas to life in the digital realm. I aspire to find a role that inspires others and fosters a dynamic work environment.
-            </p>
-        </div>
       </div>
-    
-      <img
-        src="./img/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
+
+      <div class="text-container">
+          <p>
+            Motivated young economist with degree in accounting exploring world of web development, on my own!
+            This journey is a testament to my commitment to continuous learning, experimentation, and the joy
+            of bringing ideas to life in the digital realm. I aspire to find a role that inspires others and fosters a dynamic work environment.
+          </p>
+      </div>
+    </div>
   
-      <!-- EXPERIENCE-->
-  <section class="experience-section" id="experience">
+    <img
+      src="./img/arrow.png"
+      alt="Arrow icon"
+      class="icon arrow"
+      onclick="location.href='./#experience'"
+    />
+  </section>
+
+  <!-- EXPERIENCE-->
+  <section id="experience">
     <p class="section__text__p1">Explore My</p>
     <h1 class="title">Experience</h1>
     <div class="experience-details-container">
@@ -223,7 +231,7 @@
         </div>
         <div class="details-container">
           <h2 class="experience-sub-title">My Experience</h2>
-          <div class="article2-container">
+          <div class="article-container">
               <article>
                 <div>
                   <h3>Sales Advisor / Muller, Split, Croatia</h3>
@@ -249,14 +257,14 @@
   </section>
 
   <!--PROJECTS-->
-  <section class="project-section" id="projects">
+  <section id="projects">
     <p class="section__text__p1">Browse My Recent</p>
     <h1 class="title">Projects</h1>
     <div class="experience-details-container">
       <div class="about-containers">
         <div class="details-container color-container">
           <img src="./img/Project1_photo.jpg" class="project-photo" alt="Project portfolio photo">
-          <h2 class="experience-sub-title"></h2>
+          <h2 class="experience-sub-title project-title">Project One</h2>
           <h3 class="h3-title">Portfolio</h3>
           <div class="btn-container">
             <button
@@ -275,7 +283,7 @@
         </div>
         <div class="details-container color-container">
           <img src="./img/Project2_photo.jpg" class="project-photo" alt="Dalmartica project photo">
-          <h2 class="experience-sub-title"></h2>
+          <h2 class="experience-sub-title project-title">Project Two</h2>
           <h3 class="h3-title">Dalmartica blog</h3>
           <div class="btn-container">
             <button
@@ -302,43 +310,43 @@
     />
   </section>
 
-    <!--CONTACT-->
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./img/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:ane.katic@hotmail.com">ane.katic@hotmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./img/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a onclick="location.href='https://www.linkedin.com/in/ana-katic/'">LinkedIn</a></p>
-        </div>
+  <!--CONTACT-->
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img
+          src="./img/email.png"
+          alt="Email icon"
+          class="icon contact-icon email-icon"
+        />
+        <p><a href="mailto:ane.katic@hotmail.com">ane.katic@hotmail.com</a></p>
       </div>
-    </section>
-    
-      <!--Footer-->
+      <div class="contact-info-container">
+        <img
+          src="./img/linkedin.png"
+          alt="LinkedIn icon"
+          class="icon contact-icon"
+        />
+        <p><a onclick="location.href='https://www.linkedin.com/in/ana-katic/'">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
   <footer>
-    <a href="#" class="logo">Let's Work Together</a>
-      <ul class="footerMenu">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Project</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>  
-      <p class="copyrightText">Copyright &copy; 2024 Ana Katić</p>
-    </footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; 2024 Ana Katić. All Rights Reserved.</p>
+  </footer>
 
-  
 <!--LINK for JS-->
 <script defer src="script.js"></script>
 
