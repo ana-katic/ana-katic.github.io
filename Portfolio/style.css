@@ -69,11 +69,23 @@ a:hover {
 }
 
 .logo {
-  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo:hover {
   cursor: default;
+  text-decoration: none;
 }
 
 /* HAMBURGER MENU */
