@@ -3,10 +3,12 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <!--link from google font Rubik-->
+
+ <!--link from google font Poppins-->
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
  <!--LINK for CSS-->
  <link rel="stylesheet" href="style.css">
  <link rel="stylesheet" href="queries.css">
@@ -17,21 +19,27 @@
  <!--Smooth scroll link-->
  <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
 
+ <!--IonIcons link-->
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <title>Dalmartica</title>
 </head>
 <body> 
+
 
 <!--Header-->
 <header class="header sticky">
   <a href="#" class="logo">Dalmartica</a>
   <nav class="main-nav">
     <ul class="main-nav-list">
-      <li><a href="#home" class="main-nav-link">Home</a></li>
       <li><a href="#about" class="main-nav-link">About</a></li>
-      <li><a href="#post" class="main-nav-link">Posts</a></li>
+      <li><a href="#collection" class="main-nav-link">Collections</a></li>
+      <li><a href="#gallery" class="main-nav-link">Gallery</a></li>
       <li><a href="#contact" class="main-nav-link">Contact</a></li>
     </ul>
   </nav>
+<!--mobilni header - hamburger menu icons -->
   <button class="btn-mobile-nav">
     <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
     <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
@@ -39,138 +47,179 @@
 </header>
 
 <!--Banner section-->
-<section class="banner" id="home">
- <img class="cover-photo" src="img/cover-photo-img.jpg" alt="Artistic corner with beautiful art prints">
- <div class="contentBox">
-   <h2>The World of Creativity</h2>
-   <h4>A simple blog website. Open in New Tab</h4>
-   <a href="blog.html" class="btn">Blog</a>
-  </div>
-</section>
-
-<!--About section-->
-<section class="about" id="about">
- <div class="title">
-  <h2>About us</h2>
- </div>
- <div class="contentBox">
-   <div class="content">
-    <h3 class="about-heading">How everything started</h3>
-    <p class="about-paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero voluptatibus molestias deserunt, temporibus illum cum.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, labore. Beatae culpa magni assumenda ea consectetur quae quia, doloremque iste molestias quaerat fuga fugiat id nemo similique, aliquid vitae suscipit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quam in, molestias facere quo tempora, nobis et esse, est sequi quae fugiat nemo ducimus harum inventore? Rem incidunt in quis beatae sit molestiae obcaecati temporibus odit laborum quasi? Et cumque ratione assumenda ea harum ex doloribus consectetur illum impedit a. ipsum dolor sit amet consectetur, adipisicing elit. Porro atque deserunt repudiandae necessitatibus! Modi commodi quisquam est asperiores harum hic obcaecati rem officia eaque sequi ducimus voluptatum incidunt nesciunt natus iure perspiciatis, pariatur ad consequatur deleniti quis molestias! Molestiae rem error non delectus, ea, quasi consequuntur consectetur optio adipisci cupiditate aliquid necessitatibus beatae porro sequi repellendus. Illum tempora provident voluptas impedit dignissimos sapiente officia quas rerum maiores! Magnam, incidunt eveniet obcaecati laudantium reprehenderit repellat porro libero ipsam quasi at, maxime in consequuntur tempore voluptatem iure.<br><br><br><br>Asperiores blanditiis neque, velit ea itaque reprehenderit ratione hic culpa suscipit veniam placeat iusto architecto? Harum in iusto cum similique, commodi nostrum architecto provident, vero officia nemo quasi? Harum provident magni nisi, libero numquam quod saepe alias aut totam illo minima, quidem earum iure sequi nobis, quas commodi pariatur? Labore qui magnam doloremque, libero ex, a doloribus aperiam natus quos quia quam culpa quis nulla deserunt consequuntur odio praesentium eius provident, esse dicta sed nemo animi mollitia. Aliquid consequatur, officia totam distinctio ex minus natus quibusdam tempora. Perferendis debitis animi perspiciatis fugiat quisquam possimus ut autem tempore cupiditate ullam! Aliquam perferendis aliquid deleniti magnam obcaecati eligendi dicta odio rerum laboriosam. Ea, praesentium eos. Facere, eum sit? Dicta voluptas at suscipit nobis consequuntur consequatur velit deleniti ab laboriosam obcaecati officiis consectetur laudantium qui magnam, maxime repellendus sunt? Fuga nobis ipsam debitis.</p>
-   </div>
-   <div class="content">
-     <div class="imgBox">
-      <img class="cover-photo" src="img/about-img.jpg" alt="Black & white photo">
-     </div>
-   </div>
- </div>
-</section>
-
-<!--Post section-->
-<section class="post" id="post">
-  <div class="title">
-    <h2>Latest Post</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati cupiditate ea porro velit voluptates voluptatum!</p>
-  </div>
- <div class="contentBox">
-   <div class="postColumn">
-     <div class="postBox">
-        <div class="imgBox">
-         <img class="cover-photo" src="img/post_img-1.jpg" alt="Feather photo">
+<section class="banner">
+    <a onclick="location.href='https://www.instagram.com/dalmartica/'" target="_blank" class="instagram-link">
+      <ion-icon name="logo-instagram" class="instagram-icon"></ion-icon>
+    </a>
+  <div class="container2">
+     <div class="slider">
+        <div class="slides" style="background-image: url(img/Sea-Fairy-Holiday-Wreath.jpeg);">
+          <div class="content"></div>
         </div>
-       <div class="textBox">
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit enim nemo dolorem quisquam eveniet velit porro repellendus commodi inventore sequi!</h3>
-        <a href="#" class="btn">Read More</a>
-       </div>
-     </div>
-     <div class="postBox">
-        <div class="imgBox">
-         <img class="cover-photo" src="img/post_img-2.jpg" alt="Horse Photo">
-       </div>
-       <div class="textBox">
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit enim nemo dolorem quisquam eveniet velit porro repellendus commodi inventore sequi!</h3>
-        <a href="#" class="btn">Read More</a>
-       </div>
-     </div>
-     <div class="postBox">
-       <div class="imgBox">
-        <img class="cover-photo" src="img/post_img-3.jpg" alt="Green grass photo">
-       </div>
-       <div class="textBox">
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit enim nemo dolorem quisquam eveniet velit porro repellendus commodi inventore sequi!</h3>
-        <a href="#" class="btn">Read More</a>
-       </div>
-     </div>
-   </div>  
-   <div class="postColumn">
-     <div class="postBox">
-       <div class="imgBox">
-        <img class="cover-photo" src="img/post_img-4.jpg" alt="Flower bouquet photo">
-       </div>
-       <div class="textBox">
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit enim nemo dolorem quisquam eveniet velit porro repellendus commodi inventore sequi!</h3>
-        <a href="#" class="btn">Read More</a>
-       </div>
-     </div>
-     <div class="postBox">
-       <div class="imgBox">
-        <img class="cover-photo" src="img/post_img-5.jpg" alt="Canon camera photo">
-       </div>
-       <div class="textBox">
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit enim nemo dolorem quisquam eveniet velit porro repellendus commodi inventore sequi!</h3>
-        <a href="#" class="btn">Read More</a>
-       </div>
-     </div>
-     <div class="postBox">
-       <div class="imgBox">
-        <img class="cover-photo" src="img/post_img-6.jpg" alt="A girl enjoying food photo">
-       </div>
-       <div class="textBox">
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit enim nemo dolorem quisquam eveniet velit porro repellendus commodi inventore sequi!</h3>
-        <a href="#" class="btn">Read More</a>
-       </div>
-     </div>
+       <div class="slides" style="background-image: url(img/Sea-Fairy-Christmas-Wreath.jpeg);"></div>
+       <div class="slides" style="background-image: url(img/Forest-Fairies-Christmas-Wreaths.jpeg);"></div>
+       <div class="slides" style="background-image: url(img/Fairy-Šinjorina-Christmas-Wreath.jpeg);"></div>
+       <div class="slides" style="background-image: url(img/Golden-Fairy-Christmas-Wreath.png);"></div>
    </div>
-   <div class="postColumn">
-     <div class="postBox">
-       <div class="imgBox">
-        <img class="cover-photo" src="img/post_img-7.jpg" alt="Flower in a vase photo">
-       </div>
-       <div class="textBox">
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit enim nemo dolorem quisquam eveniet velit porro repellendus commodi inventore sequi!</h3>
-        <a href="#" class="btn">Read More</a>
-       </div>
-     </div>
-     <div class="postBox">
-       <div class="imgBox">
-        <img class="cover-photo" src="img/post_img-8.jpg" alt="Sculpture photo">
-       </div>
-       <div class="textBox">
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit enim nemo dolorem quisquam eveniet velit porro repellendus commodi inventore sequi!</h3>
-        <a href="#" class="btn">Read More</a>
-       </div>
-     </div>
-     <div class="postBox">
-       <div class="imgBox">
-        <img class="cover-photo" src="img/post_img-9.jpg" alt="Lilium flower photo">
-       </div>
-       <div class="textBox">
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit enim nemo dolorem quisquam eveniet velit porro repellendus commodi inventore sequi!</h3>
-        <a href="#" class="btn">Read More</a>
-       </div>
-     </div>
+   <div class="buttons">
+      <span class="prev"></span>
+      <span class="next"></span>
+   </div>
+  </div>
+</section>
+ 
+<!--About section-->
+
+<section class="section-about" id="about">
+   <div class="container-about">
+     <span class="subheading">About Me</span>
+     <h2 class="heading-secondary">This Is My Story</h2>
+   </div>
+ 
+    <!--GRID CONTAINER ADDED HERE -->
+    <div class="container-about grid2 grid2--2-cols">
+       <div class="step-text-box">
+         <h3 class="heading-tertiary">Hello!</h3>
+         <p class="step-description">Hi! I'm Ana, a 27-year-old from Croatia with a soul that's passionate about bringing creativity into every corner of life. <br><br>While my educational journey led me through the world of economy accounting and revision, my heart pulled me toward the newfound passion of web development.
+ 
+          As I brought my handmade ideas to life, the desire to share them with others sparked the idea of creating my own blog—a place where everything I create and explore could gather in one spot. 
+        
+          It's my personal space, easily accessible for me to relive the moments and creations. However, simply using platforms like WordPress felt dull to me. Instead, I ventured into web development, finding the process fascinating. The ability to build everything exactly as I imagine it adds an extra layer of excitement to my creative journey. Why settle for simplicity when you can add spice to it? :)
+        
+          <br><br>Dalmartica is all about sharing my distinct vision of inspiration through art. It is more than an exhibition, it is a documentation of an aesthetic journey. Join me on this adventure. Come along! Uncover something unique for yourself, share it, integrate it into your life, and let it be your inspiration.</p>
+          <a href="blog.html" class="btn" id="blogButton">Blog</a>
+      </div>
+      <div class="step-img-box">
+        <img class="about-me-img" src="img/Dalmartica-Handmade-Hello-photo.png" alt="Welcome to Dalmartica, where magic meets craftsmanship! Our profile picture features a stunning handmade Christmas wreath adorned with a whimsical fairy ballerina, inviting you to explore our enchanting collection of holiday decorations. Discover the perfect blend of elegance and charm as you embark on a festive journey with us.">
+      </div>
+    </div>
+</section>
+
+<main>
+ <section class="section-collection" id="collection">
+    <div class="container">
+      <span class="subheading">Latest Collections</span>
+      <h2 class="heading-secondary">Sneak Peek into a Small World of Creations</h2>
+    </div>
+    <!--GRID CONTAINER ADDED HERE -->
+  <div class="container grid grid--2-cols grid--center-v">
+    <!--Z patern 1 -->
+    <div class="step-text-box">
+      <p class="step-number">01</p>
+      <h3 class="heading-tertiary">Adorable Baby Dolls: Handcrafted for Cherished Moments</h3>
+      <p class="step-description">Meet our lovely city fairies, each carefully made to stroll the streets of our hometown, bringing happiness and magic everywhere. Crafted with care, these dolls embody the charm of city life, eager to join you on many adventures through our bustling streets and secret corners.</p>
+    </div>
+    <div class="step-img-box">
+      <img class="step-img" src="img/Christmas-Ballerinas-01.jpeg" alt="Explore Dalmartica's handmade Christmas ballerinas, elegantly displayed on the historic streets of Croatia. Crafted with care, these charming creations capture the essence of the holiday season with their timeless grace and festive spirit.">
+    </div>
+    <!--Z PATERN 2 -->
+    <div class="step-img-box">
+     <img class="step-img" src="img/Bride-To-Be-Handmade-Bouqet-02.jpg" alt="Discover Dalmartica's exquisite handmade chocolate bouquets, meticulously crafted to add a touch of elegance and sweetness to your special day. Each bouquet is a delightful combination of premium chocolates, arranged with care to create a stunning centerpiece that brings joy and indulgence to any occasion.">
+    </div>
+    <div class="step-text-box">
+     <p class="step-number">02</p>
+     <h3 class="heading-tertiary">Chocolate Bouquets: A Sweet Delight</h3>
+     <p class="step-description">Sweet surprises await with our chocolate bouquets! Handcrafted with care and perfect for any occasion, these delightful treats are a surefire way to satisfy any sweet tooth. Whether it's a birthday, Valentine's Day, or just because, our bouquets are a deliciously thoughtful gift option. Plus, they can be customized to fit any taste or preference. Give the gift of sweetness and make every moment memorable!</p>
+    </div>
+    <!--Z PATERN 3 -->
+    <div class="step-text-box">
+      <p class="step-number">03</p>
+      <h3 class="heading-tertiary">Rustic Charm: Christmas Wreaths with Natural Elements</h3>
+      <p class="step-description">Carefully crafted with natural elements, each wreath is decorated with a creative style that is unique. Along with our charming handmade dolls, these wreaths are the perfect way to add a touch of warmth and cheer to your holiday decor. 
+        Christmas Fairy and its forest landscape. Advent wreaths made on a natural oak stump and rake. That's her fairy tale, she's magical and brave and wonderful, and I hope you'll let her be in your story</p>
+    </div>
+    <div class="step-img-box">
+      <img class="step-img" src="img/Fairy-Šinjorina-03.jpeg" alt="Experience the magic of the holiday season with Dalmartica's enchanting Fairy Christmas wreath. Handcrafted with care and adorned with nature-inspired elements, each wreath is a symbol of festive elegance and timeless beauty. Bring the spirit of Christmas into your home with this exquisite handmade creation, perfect for adding warmth and charm to your holiday décor.">
     </div>
   </div>
-  <div class="title">
-   <a href="#" class="btn mgt60">Load More</a>
-  </div>
 </section>
-  
+</main>
+
+<!--Gallery section-->
+
+<section class="section-gallery" id="gallery">
+   <div class="container">
+     <span class="subheading">My Gallery</span>
+     <h2 class="heading-secondary">Dive into Adventure: The Gallery Awaits. Join Me!</h2>
+   </div>
+
+   <!-- Behind the Craft -->
+  <div class="section-btc">
+   <div class="btc-container">
+    <h3 class="small-heading">Behind the Craft</h3>
+     <div class="btc-description">
+       <figure class="btc-box">
+        <ion-icon name="leaf-outline" class="icon"></ion-icon>
+
+        
+         <p class="btc-name">Natural Beauty</p>
+         <blockquote class="btc-text">
+          Crafted with care and inspired by nature, our products embody the essence of natural beauty. Each piece is meticulously handcrafted using fresh, sustainably-sourced materials, ensuring that every creation is as unique as the world around us. With a palette as vibrant as the great outdoors, our products bring a touch of nature's splendor into your home.
+         </blockquote>
+       </figure>
+       <figure class="btc-box">
+        <ion-icon name="brush-outline" class="icon"></ion-icon>         
+
+         <p class="btc-name">Creative Expression</p>
+         <blockquote class="btc-text">
+         At the heart of our creations lies boundless creativity. Infused with passion and imagination, each product is a testament to the power of artistic expression. From whimsical designs to intricate details, we pour our hearts into every stitch, every brushstroke, and every creation. Experience the joy of creativity with our handmade wonders.
+         </blockquote>
+       </figure>
+       <figure class="btc-box">
+        <ion-icon name="heart-circle-outline" class="icon"></ion-icon>
+         <p class="btc-name">Labor of Love</p>
+         <blockquote class="btc-text">
+         Our products are more than just items; they're a labor of love. Handcrafted with care and dedication, each piece is imbued with the warmth of human touch and the sincerity of genuine craftsmanship. From the first stroke to the final knot, we pour our love into every aspect of the creation process, ensuring that each product radiates with heartfelt affection.
+         </blockquote>
+       </figure>
+       <figure class="btc-box">
+        <ion-icon name="color-palette-outline" class="icon"></ion-icon>
+
+         <p class="btc-name">Colorful Creations</p>
+         <blockquote class="btc-text">
+          Dive into a world of color with our vibrant creations. Bursting with hues inspired by the beauty of the natural world, our products add a splash of joy to any setting. From earthy tones reminiscent of sun-kissed landscapes to playful pops of color that evoke the joy of a blooming garden, our diverse palette invites you to embrace the kaleidoscope of life.
+         </blockquote>
+       </figure>
+     </div>
+   </div>
+<!--Gallery-->
+  <div class="gallery">
+    <figure class="gallery-item">
+      <img src="img/Gallery-Photo-01.jpeg" alt="Experience the magic of the holiday season with Dalmartica's enchanting Fairy Christmas wreath. Handcrafted with care and adorned with nature-inspired elements, each wreath is a symbol of festive elegance and timeless beauty. Bring the spirit of Christmas into your home with this exquisite handmade creation, perfect for adding warmth and charm to your holiday décor.">
+    </figure>
+    <figure class="gallery-item">
+      <img src="img/Gallery-Photo-02.jpeg" alt="Explore Dalmartica's handmade Christmas ballerinas, elegantly displayed on the historic streets of Croatia. Crafted with care, these charming creations capture the essence of the holiday season with their timeless grace and festive spirit.">
+    </figure>
+    <figure class="gallery-item">
+      <img src="img/Gallery-Photo-03.jpeg" alt="Discover Dalmartica's exquisite handmade chocolate bouquets, meticulously crafted to add a touch of elegance and sweetness to your special day. Each bouquet is a delightful combination of premium chocolates, arranged with care to create a stunning centerpiece that brings joy and indulgence to any occasion.">
+    </figure>
+    <figure class="gallery-item">
+      <img src="img/Gallery-Photo-04.jpeg" alt="Explore Dalmartica's handmade Christmas ballerinas, elegantly displayed on the historic streets of Croatia. Crafted with care, these charming creations capture the essence of the holiday season with their timeless grace and festive spirit.">
+    </figure>
+    <figure class="gallery-item">
+      <img src="img/Gallery-Photo-05.jpeg" alt="Discover Dalmartica's exquisite handmade chocolate bouquets, meticulously crafted to add a touch of elegance and sweetness to your special day. Each bouquet is a delightful combination of premium chocolates, arranged with care to create a stunning centerpiece that brings joy and indulgence to any occasion.">
+    </figure>
+    <figure class="gallery-item">
+      <img src="img/Gallery-Photo-06.jpeg" alt="Experience the magic of the holiday season with Dalmartica's enchanting Fairy Christmas wreath. Handcrafted with care and adorned with nature-inspired elements, each wreath is a symbol of festive elegance and timeless beauty. Bring the spirit of Christmas into your home with this exquisite handmade creation, perfect for adding warmth and charm to your holiday décor.">
+    </figure>
+    <figure class="gallery-item">
+      <img src="img/Gallery-Photo-07.jpeg" alt="Discover Dalmartica's exquisite handmade chocolate bouquets, meticulously crafted to add a touch of elegance and sweetness to your special day. Each bouquet is a delightful combination of premium chocolates, arranged with care to create a stunning centerpiece that brings joy and indulgence to any occasion.">
+    </figure>
+    <figure class="gallery-item">
+      <img src="img/Gallery-Photo-08.jpeg" alt="Explore Dalmartica's handmade Christmas ballerinas, elegantly displayed on the historic streets of Croatia. Crafted with care, these charming creations capture the essence of the holiday season with their timeless grace and festive spirit.">
+    </figure>
+    <figure class="gallery-item">
+      <img src="img/Gallery-Photo-09.jpeg" alt="Experience the magic of the holiday season with Dalmartica's enchanting Fairy Christmas wreath. Handcrafted with care and adorned with nature-inspired elements, each wreath is a symbol of festive elegance and timeless beauty. Bring the spirit of Christmas into your home with this exquisite handmade creation, perfect for adding warmth and charm to your holiday décor.">
+    </figure>
+  </div>
+</div>
+</section>
+
 <!--Contact-->
 <section class="contact" id="contact">
-  <div class="title">
-      <h2>Get in Touch</h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati cupiditate ea porro velit voluptates voluptatum!</p>
+  <div class="container">
+      <h2 class="subheading">Get in Touch</h2>
+      <p class="contact-text"> Got questions? We've Got answers! We're here to share our passion with you! Reach out, and let's explore this creative journey together!"</p>
   </div>
   <div class="contactForm">
     <div class="row">
@@ -190,19 +239,20 @@
   </div>
 </section>  
 
+
 <!--Footer-->
 <footer>
   <a href="#" class="logo">Dalmartica</a>
   <ul class="footerMenu">
-    <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#post">Posts</a></li>
+    <li><a href="#collection">Collections</a></li>
+    <li><a href="#gallery">Gallery</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <p class="copyrightText">Copyright &copy; 2023 Dalmartica</p>
+  <p class="copyrightText">Copyright &copy; 2024 Dalmartica</p>
 </footer>
 
-  
+
 <!--LINK for JS-->
 <script defer src="script.js"></script>
 </body>

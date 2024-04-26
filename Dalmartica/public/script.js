@@ -1,16 +1,26 @@
-// where we need to click in order for something to happen --> button btn-mobile-nav
+//--> button btn-mobile-nav
 
-const btnNavEl = document.querySelector('.btn-mobile-nav');
+  const btnNavEl = document.querySelector('.btn-mobile-nav');
 
-// where we want to add class nav-open --> to the header
+// class nav-open --> to the header
 
-const headerEL = document.querySelector('.header');
+  const headerEL = document.querySelector('.header');
 
-btnNavEl.addEventListener('click', function() {
+  btnNavEl.addEventListener('click', function() {
   headerEL.classList.toggle('nav-open');
 });
 
-// na header smo dodali nav-open 
+
+// JavaScript functionality to the "Blog" button
+  const blogButton = document.getElementById('blogButton');
+
+  blogButton.addEventListener('click', function () {
+// Specify the URL to navigate to
+  const blogUrl = blogButton.getAttribute('href');
+
+// Navigate to the specified URL
+  window.location.href = blogUrl;
+});
 
 
 /* smooth scrolling animation */
@@ -38,7 +48,21 @@ allLinks.forEach(function (link) {
     // Close mobile naviagtion
     if (link.classList.contains("main-nav-link"))
       headerEL.classList.toggle('nav-open');
-    // here we are removing that nav-open iif it is on the header
   });
 });
 
+// <!-- JS slide show code -->
+
+let next = document.querySelector('.next');
+let prev = document.querySelector('.prev');
+let slider = document.querySelector('.slider');
+
+next.addEventListener('click', function(){
+  let slides = document.querySelectorAll('.slides');
+  slider.appendChild(slides[0])
+});
+
+prev.addEventListener('click', function(){
+  let slides = document.querySelectorAll('.slides');
+  slider.prepend(slides[slides.length - 1]);
+});

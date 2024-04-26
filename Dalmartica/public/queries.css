@@ -1,26 +1,39 @@
 /* BELOW 1344px (Smaller desktops) */
 
-@media (max-width: 84em) {
-  .about .contentBox {
-    grid-template-columns: repeat(1, 2fr);
-    margin-top: -4rem;
+ @media (max-width: 84em) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* BELOW 1200px (Landscape Tablets) */
 
 @media (max-width: 75em) {
-  html {
-    /* 9px / 16px  */
+  html {/* 9px / 16px */
     font-size: 56.25%;
   }
-  .about .contentBox {
-    grid-template-columns: repeat(1, 2fr);
-    margin-top: -4rem;
+
+  .heading-secondary {
+    font-size: 3.6rem;
   }
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+}
+   .header {
+    padding: 0 3.2rem;
+   }
+   .btc-container {
+    padding: 9.6rem 3.2rem;
+  }
+ 
 }
 
 /* BELLOW 994px (mobile)*/
+
 @media (max-width: 59em) {
 
 html {
@@ -83,29 +96,91 @@ header {
   padding: 2rem 2rem;
 }
 
+.heading-secondary {
+  font-size: 4.4rem;
+  text-align: center;
+}
+
 header.sticky {
   padding: 1rem 2rem;
 }
 
-section {
-  padding: 2rem;
+.step-number {
+  font-size: 7.4rem;
 }
 
-.banner .contentBox {
-  padding: 4rem 3rem;
+/* section behind the craft */
+
+.section-btc {
+  grid-template-columns: 1fr;
 }
 
-.about .contentBox {
-  grid-template-columns: repeat(1, 1fr);
-  margin-top: -4rem;
+.gallery {
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.post .contentBox {
-  grid-template-columns: repeat(1,1fr);
+/* slider show section mobilni  */
+
+.instagram-icon {
+  position: absolute;
+  left: 84%; 
+  top: 71%;
+  transform: translateY(-50%);
+  font-size: 24px; 
+  color: #ffffff; 
+  z-index: 1000; 
+  }
+
+.instagram-icon:hover {
+  color: #f5f891;
+  }
+
+.slider {
+  position: absolute;
+  inset: 40px 40px 200px 40px;
+  }
+
+.slider .slides {
+  width: 100px;
+  height: 100px;
+  top: initial;
+  bottom: -170px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  }
+
+.slider .slides:nth-child(1),
+.slider .slides:nth-child(2) {
+  top: initial;
+  bottom: 0px;
 }
 
-.post .contentBox .postColumn .postBox {
-  height: 100rem;
+.slider .slides:nth-child(3) {
+  left: 0;
+}
+
+.slider .slides:nth-child(4) {
+  left: 120px;
+}
+
+.slider .slides:nth-child(5) {
+  left: 240px;
+}
+
+.slider .slides:nth-child(6) {
+  left: 360px;
+}
+.buttons {
+  bottom: 15px;
+}
+
+.buttons span {
+  width: 40px;
+  height: 40px;
+}
+
+.buttons span:before {
+  width: 10px;
+  height: 10px;
 }
 
 /* Contact*/
@@ -113,6 +188,7 @@ section {
 .contact .contactForm .row {
   grid-template-columns: repeat(1,1fr);
 }
+
 
 /* Footer*/
 
@@ -139,4 +215,32 @@ footer .footerMenu li a {
 .mgt60 {
   margin-top: 0px;
 }
+
+/* grid2 about me section */
+
+.grid2--2-cols {
+  grid-template-columns: 1fr; 
 }
+
+.step-img-box {
+  margin-top: 2rem; 
+  }
+
+
+.step-img {
+  max-width: 100%; 
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
